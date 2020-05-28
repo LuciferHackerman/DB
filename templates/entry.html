@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<form method="post" action="/search">
+    <table>
+        <tr>
+            <td>Поиск преподавателя по табельному номеру:</td>
+            <td><input name="phrase" type="text" width="60"></td>
+        </tr>
+    </table>
+    <p><input value="Показать" type="submit"></p>
+
+</form>
+<form method="post" action="/viewthecathedra">
+    <table>
+        <tr>
+            <td>Список кафедр отсортированный по коду</td>
+        </tr>
+    </table>
+    <p><input value="Показать" type="submit"></p>
+
+</form>
+<form method="post" action="/search_by_cathedra_code">
+    <table>
+        <tr>
+            <td>Поиск преподавателей по коду кафедры</td>
+            <td><input name="phrase" type="text" width="60"></td>
+        </tr>
+    </table>
+    <p><input value="Показать" type="submit"></p>
+
+</form>
+<form method="post" action="/viewall">
+    <table>
+        <tr>
+            <td>Показать всех преподавателей</td>
+        </tr>
+    </table>
+    <p><input value="Показать" type="submit"></p>
+
+</form>
+<form method="post" action="/viewcount">
+    <table>
+        <tr>
+            <td>Количество преподавателей на каждой кафедре</td>
+        </tr>
+    </table>
+    <p><input value="Показать" type="submit"></p>
+
+</form>
+{% endblock %}
